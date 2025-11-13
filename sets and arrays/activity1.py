@@ -1,0 +1,10 @@
+set1={1,2,3,4,5}
+print(set1)
+set2={1,2,'ab','bc'}
+print(set2)
+set3=([1,2,3,4])
+print(set3)
+set4={1,2,3,4,5}
+print('original',set4)
+set4.pop()
+print('changed',set4)
