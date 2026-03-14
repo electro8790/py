@@ -1,0 +1,17 @@
+import tkinter as tk
+window = tk.Tk()
+window.geometry("400x300")
+window.title("inches to centimeters")
+description_label = tk.Label(window, text="Enter the length in inches to convert it to centimeters.", font=("Arial", 10))
+description_label.pack(pady=10)    
+label1 = tk.Label(window, text="Enter length in inches:")
+label1.pack()
+entry1 = tk.Entry(window, width=20)
+entry1.pack()   
+def change():
+    centimeters=float(entry1.get())*float(2.54)
+    label2= tk.Label(window, text=f"Length in centimeters: {centimeters:.2f}")
+    label2.place(x=125,y=150)
+changebutton= tk.Button(window, text="Convert to Centimeters", command=change)
+changebutton.pack(pady=10)
+window.mainloop()
